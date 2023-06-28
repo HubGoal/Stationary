@@ -4,6 +4,7 @@
     --darkBlue: #1877F2;
     --softGray: #F2F4F8;
     --white: #ffffff;
+    --containers-bgcolor: #ebebeb;
     --black: #0000000;
     --linesColor : #DDE1E6;
     --fuentePrincipal: 'Roboto', sans-serif;
@@ -64,17 +65,17 @@ img{
 .container__list .list__item{
     list-style: none;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 @media (min-width:768px){
     .container__list .link__item{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 .main__container{
     display: grid;
-    grid-template-areas: "main main aside aside"
-                         /* "main main aside"
-                         "main main aside"; */
+    grid-template-areas: "main main";
+    
 
 }
 .main{
@@ -84,6 +85,7 @@ img{
     gap: 1rem;
     justify-items: center;
     align-self: center;
+    
 }
 
 
@@ -91,81 +93,42 @@ img{
     .main{
         grid-template-columns: repeat(2,1fr);
     }
+    
 }
 @media (min-width: 992px){
     .main{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,2fr);
+
+        
     }
     .product{
         width: 18rem;
+        background-color: var(--containers-bgcolor);
+        border-radius: 10px;
     }
 }
-.aside{
-    
-    grid-area: aside;
-    border-left: solid .3rem var(--linesColor);
-    /* background-color: var(--linesColor); */
-}
+
 .product img {
     width: 20rem;
+    padding: 2px;
+    background-color: var(--containers-bgcolor);
+    border-radius: 10px;
 }
 
 .product{
     width: 20rem;
 }
 
-.product__link{
-
-}
 .product__info{
-    margin-top: -4rem;
+    
+    margin-top: -2REM
+    
 }
 .product__info p{
     margin-top: -2rem;
     padding-right: 5rem;
 }
 
-.aside h3{
-    font-size: 2.2rem;
-}
-.aside .product__selected img{
-    width: 5rem;
-}
-@media (min-width: 768px){
-    .aside .product__selected img{
-        width: 10rem;
-    }
-}
-@media (min-width: 992px){
-    .aside .product__selected img{
-    }
-}
-.aside .product__selected{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.aside .product__selected a{
-    background-color: var(--darkBlue);
-    color: var(--white);
-    font-weight: bold;
-    letter-spacing: .2rem;
-    padding: .5rem;
-    border-radius: 10rem;
-    width: 10rem;
-}
-@media (min-width: 768px){
-    .aside .product__selected a {
-        width: 15rem;
-
-    }
-}
-@media (min-width: 992px){
-    .aside .product__selected a {
-        width: 20rem;
-
-    }
-}
 
 
 .icon{
@@ -301,6 +264,13 @@ img{
     width: 60rem;
 }
 
+.Payment{
+    background-color: var(--containers-bgcolor);
+    width: 105rem;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+}
+
 .main__button{
     display: inline-block;
     width: 60rem;
@@ -387,6 +357,7 @@ img{
     padding: 20px;
     margin-bottom: 10px;
     display: flex;
+    justify-content: space-evenly;
 
 }
 .shop__info h3{
@@ -396,21 +367,15 @@ img{
     margin: 0;
 }
 
-.shoppingC_mainframe .texts{
-    /* margin-bottom: 5px; */
-}
+
 
 .shoppingC_mainframe .price{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    text-justify: end;
     font-size: 22px;
     font-weight: bold;
+
 }
 
 .shoppingC_mainframe .article_img{
-    width: 80px;
     margin-right: 20px;
 }
 
@@ -472,6 +437,31 @@ img{
     width: 120px;
 }
 
+.main-frame .paymentss{
+    display: flex;
+    justify-content: space-between;
+
+}
+.main-frame .containers .paymentss{
+    display: flex;
+    justify-content: space-between;
+
+}
+.paymentss__title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.div-invisible{
+    display: flex;
+    justify-content: start;
+}
+
+.containers .payment{
+    display: flex;
+    justify-content: space-between;
+}
+
 .main-frame .large-container{
     display: flex;
     flex-direction: column;
@@ -505,11 +495,15 @@ img{
 
 .main-frame .large-container .smaller-inputs{
     height: 30px;
-    width: 160px;
+    width: 16rem;
     margin-right: 30px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 7px;
+}
+
+.main-frame .large-container .test_label{
+    display: flex;
 }
 
 .main-frame .Button{
@@ -536,6 +530,9 @@ img{
 }
 
 
+.lascosas{
+    margin-bottom: -50px;
+}
 
 header {
     display: flex;
@@ -563,6 +560,7 @@ header {
 
 .buscar {
     position: relative;
+    
 }
 
 .lupa {
@@ -589,6 +587,7 @@ input .btn::placeholder {
 
 header nav{
     display: flex;
+    
 }
 header nav a {
     font-weight: 600;
@@ -601,6 +600,8 @@ header nav a:hover {
 @media (min-width: 768px ){
     .btn{
         width: 500px;
+        outline: none;
+        border: none;
     }
 }
 @media (min-width: 992px){
@@ -636,6 +637,13 @@ header nav a:hover {
     display: flex;
     margin-right: 1rem;
 }
+
+
+
+.stars__counters{
+    display: flex;
+}
+
 .product__container .product__img{
     /* min-width: 20rem; */
     width: 50%;
